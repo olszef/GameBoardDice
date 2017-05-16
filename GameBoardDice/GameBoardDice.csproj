@@ -89,9 +89,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Genres\adventure.svg" />
+    <Content Include="Content\Genres\agility.svg" />
+    <Content Include="Content\Genres\cards.svg" />
+    <Content Include="Content\Genres\dice.svg" />
+    <Content Include="Content\Genres\economy.svg" />
+    <Content Include="Content\Genres\education.svg" />
+    <Content Include="Content\Genres\family.svg" />
+    <Content Include="Content\Genres\logic.svg" />
+    <Content Include="Content\Genres\other.svg" />
+    <Content Include="Content\Genres\party.svg" />
+    <Content Include="Content\Genres\sport.svg" />
+    <Content Include="Content\Genres\strategy.svg" />
+    <Content Include="Content\Genres\war.svg" />
     <Content Include="Content\Images\basket.png" />
     <Content Include="Content\Images\cart_white.png" />
+    <Content Include="Content\Images\home-small.png" />
     <Content Include="Content\Images\logo.png" />
+    <Content Include="Content\Images\slide.jpg" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\Page.css" />
     <Content Include="Global.asax" />
