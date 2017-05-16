@@ -1,0 +1,84 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_MainLayout</title>
+
+    <link href="@Url.Content("~/Content/Page.css")" rel="stylesheet" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Indie+Flower|Comfortaa|Aclonica " />
+</head>
+<body>
+    <header>
+        <div id="header-info">
+            <span id="contact-header">
+                <span id="mobile-header">Telefon: <a href="">+48 123 456 789</a></span>
+                <span id="email-header">E-mail: <a href="">olszef@gmail.com</a></span>
+            </span>
+
+            <a id="cart-header" href="">
+                Koszyk (0)
+                <span id="cart-header-logo"></span>
+            </a>
+        </div>
+
+        <div id="main-logo">
+            <a id="main-logo-url" href="">
+                <img src="@Url.Content("~/Content/Images/logo.png")" />
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <ul id="main-menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Nowości</a></li>
+            <li><a href="">Bestsellery</a></li>
+            <li><a href="">Gamers Corner</a></li>
+            <li><a href="">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <aside>
+        <h2>Kategorie</h2>
+        <ul>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/education.svg")" width="20" height="20"/><span>Edukacyjne</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/economy.svg")" width="20" height="20" /><span>Ekonomiczne</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/party.svg")" width="20" height="20" /><span>Imprezowe</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/cards.svg")" width="20" height="20" /><span>Karciane</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/logic.svg")" width="20" height="20" /><span>Logiczne</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/dice.svg")" width="20" height="20" /><span>Kościane</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/adventure.svg")" width="20" height="20" /><span>Przygodowe</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/strategy.svg")" width="20" height="20" /><span>Strategiczne</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/sport.svg")" width="20" height="20" /><span>Sportowe</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/agility.svg")" width="20" height="20" /><span>Zręcznościowe</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/war.svg")" width="20" height="20" /><span>Wojenne</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/family.svg")" width="20" height="20" /><span>Familijne</span></a></li>
+            <li><a href=""><img src="@Url.Content("~/Content/Genres/other.svg")" width="20" height="20" /><span>Inne</span></a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h1>Tekst zależny od podstrony</h1>
+        <a href="" id="path"><img src="@Url.Content("~/Content/Images/home-small.png")" width="20" height="20" /><span>Start</span></a>
+        @RenderBody()
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="">O nas</a></li>
+            <li><a href="">Kontakt</a></li>
+            <li><a href="">Wysyłka</a></li>
+            <li><a href="">Regulmin</a></li>
+            <li><a href="">Pomoc w wyborze</a></li>
+        </ul>
+        <p>Copyright &copy; 2016 Mateusz Olszewski</p>
+    </footer>
+
+</body>
+</html>
