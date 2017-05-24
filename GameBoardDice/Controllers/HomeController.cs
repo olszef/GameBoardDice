@@ -1,4 +1,7 @@
-﻿using System;
+﻿using GameBoardDice.DAL;
+using GameBoardDice.Models;
+using GameBoardDice.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,15 +11,29 @@ namespace GameBoardDice.Controllers
 {
     public class HomeController : Controller
     {
+        private StoreContext db = new StoreContext();
+
         // GET: Home
         public ActionResult Index()
         {
-            return View();
+            var categories = db.Categories.ToList();
+            var newGames = db.Games.Where(a => !a.IsHidden).OrderByDescending(a => a.DateAdded).Take(6).ToList();
+            var bestsellers = db.Games.Where(a => !a.IsHidden && a.IsBestSeller).OrderBy(g => Guid.NewGuid()).Take(6).ToList();
+
+            var vm = new HomeViewModel()
+            {
+                Categories = categories,
+                NewGames = newGames,
+                Bestsellers = bestsellers
+            };
+
+            return View(vm);
         }
 
-        public ActionResult Genre()
+        public ActionResult StaticContent(string viewname)
         {
-            return View();
+            ViewBag.Title = "";
+            return View(viewname);
         }
 
         public ActionResult Cart()
@@ -35,11 +52,6 @@ namespace GameBoardDice.Controllers
         }
 
         public ActionResult ShippingDetails()
-        {
-            return View();
-        }
-
-        public ActionResult ItemDetails()
         {
             return View();
         }

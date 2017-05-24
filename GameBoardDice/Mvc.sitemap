@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home" action="Index">
+    <mvcSiteMapNode title="O nas" controller="Home" action="About"/>
+    <mvcSiteMapNode title="Category" controller="Store" action="List" dynamicNodeProvider="GameBoardDice.Infrastructure.CategoriesDynamicNodeProvider, GameBoardDice">
+      <mvcSiteMapNode title="Details" controller="Store" action="Details" dynamicNodeProvider="GameBoardDice.Infrastructure.DetailsDynamicNodeProvider, GameBoardDice" />
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+
+</mvcSiteMap>

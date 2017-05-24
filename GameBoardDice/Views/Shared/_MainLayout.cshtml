@@ -8,7 +8,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>_MainLayout</title>
+    <title>@ViewBag.Title</title>
 
     <link href="@Url.Content("~/Content/Page.css")" rel="stylesheet" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Indie+Flower|Comfortaa|Aclonica " />
@@ -28,7 +28,7 @@
         </div>
 
         <div id="main-logo">
-            <a id="main-logo-url" href="">
+            <a id="main-logo-url" href="@Url.Content("~/")">
                 <img src="@Url.Content("~/Content/Images/logo.png")" />
             </a>
         </div>
@@ -36,7 +36,7 @@
 
     <nav>
         <ul id="main-menu">
-            <li><a href="">Home</a></li>
+            <li><a href="@Url.Action("Index", "Home")">Home</a></li>
             <li><a href="">Nowości</a></li>
             <li><a href="">Bestsellery</a></li>
             <li><a href="">Gamers Corner</a></li>
@@ -47,35 +47,35 @@
     <aside>
         <h2>Kategorie</h2>
         <ul>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/education.svg")" width="20" height="20"/><span>Edukacyjne</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/economy.svg")" width="20" height="20" /><span>Ekonomiczne</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/party.svg")" width="20" height="20" /><span>Imprezowe</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/cards.svg")" width="20" height="20" /><span>Karciane</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/logic.svg")" width="20" height="20" /><span>Logiczne</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/dice.svg")" width="20" height="20" /><span>Kościane</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/adventure.svg")" width="20" height="20" /><span>Przygodowe</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/strategy.svg")" width="20" height="20" /><span>Strategiczne</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/sport.svg")" width="20" height="20" /><span>Sportowe</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/agility.svg")" width="20" height="20" /><span>Zręcznościowe</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/war.svg")" width="20" height="20" /><span>Wojenne</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/family.svg")" width="20" height="20" /><span>Familijne</span></a></li>
-            <li><a href=""><img src="@Url.Content("~/Content/Genres/other.svg")" width="20" height="20" /><span>Inne</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "educational" })"><img src="@Url.Content("~/Content/Categories/educational.svg")" width="20" height="20"/><span>Edukacyjne</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "economy" })"><img src="@Url.Content("~/Content/Categories/economy.svg")" width="20" height="20" /><span>Ekonomiczne</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "party" })"><img src="@Url.Content("~/Content/Categories/party.svg")" width="20" height="20" /><span>Imprezowe</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "cards" })"><img src="@Url.Content("~/Content/Categories/cards.svg")" width="20" height="20" /><span>Karciane</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "logical" })"><img src="@Url.Content("~/Content/Categories/logical.svg")" width="20" height="20" /><span>Logiczne</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "dice" })"><img src="@Url.Content("~/Content/Categories/dice.svg")" width="20" height="20" /><span>Kościane</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "adventure" })"><img src="@Url.Content("~/Content/Categories/adventure.svg")" width="20" height="20" /><span>Przygodowe</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "strategy" })"><img src="@Url.Content("~/Content/Categories/strategy.svg")" width="20" height="20" /><span>Strategiczne</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "sport" })"><img src="@Url.Content("~/Content/Categories/sport.svg")" width="20" height="20" /><span>Sportowe</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "agility" })"><img src="@Url.Content("~/Content/Categories/agility.svg")" width="20" height="20" /><span>Zręcznościowe</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "war" })"><img src="@Url.Content("~/Content/Categories/war.svg")" width="20" height="20" /><span>Wojenne</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "family" })"><img src="@Url.Content("~/Content/Categories/family.svg")" width="20" height="20" /><span>Familijne</span></a></li>
+            <li><a href="@Url.Action("List","Store", new { category = "other" })"><img src="@Url.Content("~/Content/Categories/other.svg")" width="20" height="20" /><span>Inne</span></a></li>
         </ul>
     </aside>
 
     <main>
-        <h1>Tekst zależny od podstrony</h1>
-        <a href="" id="path"><img src="@Url.Content("~/Content/Images/home-small.png")" width="20" height="20" /><span>Start</span></a>
+        <h1>@ViewBag.Heading</h1>
+        <a href="" id="path"><img src="@Url.Content("~/Content/Images/home-small.png")" width="20" height="20" /><span>@Html.MvcSiteMap().SiteMapPath()</span></a>
         @RenderBody()
     </main>
 
     <footer>
         <ul>
-            <li><a href="">O nas</a></li>
-            <li><a href="">Kontakt</a></li>
-            <li><a href="">Wysyłka</a></li>
-            <li><a href="">Regulmin</a></li>
-            <li><a href="">Pomoc w wyborze</a></li>
+            <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "about" })">O nas</a></li>
+            <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "contact" })">Kontakt</a></li>
+            <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "delivery" })">Wysyłka</a></li>
+            <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "terms" })">Regulmin</a></li>
+            <li><a href="@Url.Action("StaticContent", "Home", new { viewname = "personalhelp" })">Pomoc w wyborze</a></li>
         </ul>
         <p>Copyright &copy; 2016 Mateusz Olszewski</p>
     </footer>
