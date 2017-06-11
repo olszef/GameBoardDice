@@ -1,11 +1,19 @@
-﻿
+﻿@model IEnumerable<GameBoardDice.Models.Game>
+@using GameBoardDice.Infrastructure
 
-<section id="genre-list">
-    
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-</section>
+<ul>
+    @foreach (var game in Model)
+    {
+        <li class="game-element">
+            <a href="@Url.Action("AddToCart", "Cart", new { id = game.GameID })" class="addtocart-link"></a>
+
+            <a href="@Url.Action("Details", "Store", new { id = game.GameID })">
+                @if (game.IsBestSeller)
+                {
+                    <div class="bestsellerFlag"></div>
+                }
+                <img src="@Url.BoxImagePath(game.BoxFileName)" />
+            </a>
+        </li>
+    }
+</ul>

@@ -9,18 +9,36 @@
     <img src="@Url.Content("~/Content/Images/slide.jpg")" />
 </section>
 
-<h2>Nowe produkty!</h2>
+
 <section id="newgames">
-    @foreach (var newgame in Model.NewGames)
-    {
-        <div><a href="@Url.Action("Details", "Store", new { id = newgame.GameID })"><div class="newFlag"></div><img src="@Url.BoxImagePath(newgame.BoxFileName)" /></a></div>
-    }
+    <h2>Nowe produkty!</h2>
+    <ul>
+        @foreach (var newgame in Model.NewGames)
+        {
+            <li class="game-element">
+                <a href="@Url.Action("AddToCart", "Cart", new { id = newgame.GameID })" class="addtocart-link"></a>
+                <a href="@Url.Action("Details", "Store", new { id = newgame.GameID })">
+                    <div class="newFlag"></div>
+                    <img src="@Url.BoxImagePath(newgame.BoxFileName)" />
+                </a>
+            </li>
+        }
+    </ul>
 </section>
 
-<h2>Bestsellery!</h2>
+
 <section id="bestsellers">
-    @foreach (var bestseller in Model.Bestsellers)
-    {
-        <div><a href="@Url.Action("Details", "Store", new { id = bestseller.GameID })"><div class="bestsellerFlag"></div><img src="@Url.BoxImagePath(bestseller.BoxFileName)" /></a></div>
-    }
+    <h2>Bestsellery!</h2>
+    <ul>
+        @foreach (var bestseller in Model.NewGames)
+        {
+            <li class="game-element">
+                <a href="@Url.Action("AddToCart", "Cart", new { id = bestseller.GameID })" class="addtocart-link"></a>
+                <a href="@Url.Action("Details", "Store", new { id = bestseller.GameID })">
+                    <div class="bestsellerFlag"></div>
+                    <img src="@Url.BoxImagePath(bestseller.BoxFileName)" />
+                </a>
+            </li>
+        }
+    </ul>
 </section>

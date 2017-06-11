@@ -19,9 +19,10 @@ namespace GameBoardDice.Controllers
 
         public ActionResult List(string category)
         {
-            var categoryGames = db.Categories.Include("Game").Where(c => c.Name.ToLower() == category.ToLower());
+            var categoryData = db.Categories.Include("Games").Where(c => c.Name.ToLower() == category.ToLower()).Single();
+            var games = categoryData.Games.ToList();
 
-            return View(categoryGames);
+            return View(games);
         }
     }
 }

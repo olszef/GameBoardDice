@@ -1,15 +1,11 @@
-﻿
+﻿@model IEnumerable<GameBoardDice.Models.Game>
+
 @{
     ViewBag.Title = "GBD - kategoria";
     ViewBag.Heading = "Wybierz dla siebie grę z wybranej kategorii!";
 }
 
 
-<section id="genre-list">
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
-    <a href=""><img src="@Url.Content("~/Content/Images/slide.jpg")" /></a>
+<section id="category-list">
+    @Html.Partial("_List")
 </section>
