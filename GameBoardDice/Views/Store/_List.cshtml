@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<GameBoardDice.Models.Game>
 @using GameBoardDice.Infrastructure
 
-<ul>
+<ul id="games-list">
     @foreach (var game in Model)
     {
         <li class="game-element">

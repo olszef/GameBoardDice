@@ -12,6 +12,8 @@
 
     <link href="@Url.Content("~/Content/Page.css")" rel="stylesheet" />
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Indie+Flower|Comfortaa|Aclonica " />
+
+    @System.Web.Optimization.Styles.Render("~/Content/themes/base/css")
 </head>
 <body>
     <header>
@@ -80,5 +82,6 @@
         <p>Copyright &copy; 2016 Mateusz Olszewski</p>
     </footer>
 
+    @RenderSection("ScriptsBottom", required: false)
 </body>
 </html>

@@ -1,10 +1,12 @@
-﻿using GameBoardDice.DAL;
+﻿using GameBoardDice.App_Start;
+using GameBoardDice.DAL;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Optimization;
 using System.Web.Routing;
 
 namespace GameBoardDice
@@ -15,6 +17,7 @@ namespace GameBoardDice
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
 }
