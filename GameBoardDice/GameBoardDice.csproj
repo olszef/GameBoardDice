@@ -218,7 +218,6 @@
     <Content Include="Content\Categories\sport.svg" />
     <Content Include="Content\Categories\strategy.svg" />
     <Content Include="Content\Categories\war.svg" />
-    <Content Include="Content\Images\basket.png" />
     <Content Include="Content\Images\bestseller.png" />
     <Content Include="Content\Images\cart.png" />
     <Content Include="Content\Images\cart_white.png" />
