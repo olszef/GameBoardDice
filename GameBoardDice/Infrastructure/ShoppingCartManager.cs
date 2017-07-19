@@ -19,33 +19,33 @@ namespace GameBoardDice.Infrastructure
             this.db = db;
         }
 
-        public void AddToCart(int gameId)
-        {
-            var cart = this.GetCart();
+        //public void AddToCart(int gameId)
+        //{
+        //    var cart = this.GetCart();
 
-            var cartItem = cart.Find(c => c.Game.GameId == gameId);
+        //    var cartItem = cart.Find(c => c.Game.GameId == gameId);
 
-            if (cartItem !=null)
-            {
-                cartItem.Quantity++;
-            }
-            else
-            {
-                var gameToAdd = db.Games.Where(g => g.GameID == gameId).SingleOrDefault();
-                if (gameToAdd != null)
-                {
-                    var newCartItem = new CartItem()
-                    {
-                        Game = gameToAdd,
-                        Quantity = 1,
-                        TotalPrice = gameToAdd.Price
-                    };
+        //    if (cartItem !=null)
+        //    {
+        //        cartItem.Quantity++;
+        //    }
+        //    else
+        //    {
+        //        var gameToAdd = db.Games.Where(g => g.GameID == gameId).SingleOrDefault();
+        //        if (gameToAdd != null)
+        //        {
+        //            var newCartItem = new CartItem()
+        //            {
+        //                Game = gameToAdd,
+        //                Quantity = 1,
+        //                TotalPrice = gameToAdd.Price
+        //            };
 
-                    cart.Add(newCartItem);
-                }
-            }
+        //            cart.Add(newCartItem);
+        //        }
+        //    }
 
-            session.Set(CartSessionKey, cart);
-        }
+        //    session.Set(CartSessionKey, cart);
+        //}
     }
 }
