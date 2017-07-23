@@ -194,17 +194,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Boxes\1.png" />
-    <Content Include="Content\Boxes\2.png" />
-    <Content Include="Content\Boxes\3.png" />
-    <Content Include="Content\Boxes\4.jpg" />
-    <Content Include="Content\Boxes\5.png" />
-    <Content Include="Content\Boxes\6.png" />
-    <Content Include="Content\Boxes\7.png" />
-    <Content Include="Content\Boxes\8.png" />
-    <Content Include="Content\Boxes\9.png" />
+    <Content Include="Content\Boxes\7mir.jpg" />
+    <Content Include="Content\Boxes\abyss.jpg" />
+    <Content Include="Content\Boxes\agricola.jpg" />
+    <Content Include="Content\Boxes\alchemicy.jpg" />
+    <Content Include="Content\Boxes\blacksmiths.jpg" />
+    <Content Include="Content\Boxes\catan.jpg" />
+    <Content Include="Content\Boxes\chaos.jpg" />
+    <Content Include="Content\Boxes\cortex.jpg" />
+    <Content Include="Content\Boxes\deal.jpg" />
+    <Content Include="Content\Boxes\dixit.jpg" />
+    <Content Include="Content\Boxes\dobble.jpg" />
+    <Content Include="Content\Boxes\dragonsrace.jpg" />
+    <Content Include="Content\Boxes\hive.jpg" />
+    <Content Include="Content\Boxes\junglespeed.jpg" />
+    <Content Include="Content\Boxes\munchkin.png" />
+    <Content Include="Content\Boxes\patchwork.jpg" />
     <Content Include="Content\Boxes\slide.jpg" />
     <Content Include="Content\Boxes\slide1.jpg" />
+    <Content Include="Content\Boxes\splendor.jpg" />
+    <Content Include="Content\Boxes\taboo.jpg" />
     <Content Include="Content\Categories\adventure.svg" />
     <Content Include="Content\Categories\agility.svg" />
     <Content Include="Content\Categories\cards.svg" />
@@ -224,8 +233,8 @@
     <Content Include="Content\Images\home-small.png" />
     <Content Include="Content\Images\logo.png" />
     <Content Include="Content\Images\new.png" />
+    <Content Include="Content\Images\searchlogo.png" />
     <Content Include="Content\Images\slide.jpg" />
-    <Content Include="Content\logo.png" />
     <Content Include="Content\Page.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -304,6 +313,10 @@
     <Compile Include="Migrations\201705211839476_InitialCreate.Designer.cs">
       <DependentUpon>201705211839476_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707231700096_NewTestData.cs" />
+    <Compile Include="Migrations\201707231700096_NewTestData.Designer.cs">
+      <DependentUpon>201707231700096_NewTestData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CartItem.cs" />
     <Compile Include="Models\Category.cs" />
@@ -314,7 +327,9 @@
     <Compile Include="ViewModels\HomeViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
+    <Content Include="Views\web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_MainLayout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -357,6 +372,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705211839476_InitialCreate.resx">
       <DependentUpon>201705211839476_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707231700096_NewTestData.resx">
+      <DependentUpon>201707231700096_NewTestData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
